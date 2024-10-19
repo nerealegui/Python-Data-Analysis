@@ -1,0 +1,25 @@
+flowchart TD
+    A[User opens dimension_reduction.ipynb] --> B[Load Libraries]
+    B --> C[Load Data]
+    C --> D[Preprocess Data]
+    D --> E[Apply Dimension Reduction]
+    E --> F[Analyze Results]
+    F --> G[Display Results]
+
+    subgraph "Dimension Reduction Process"
+        E1[Choose Dimension Reduction Technique]
+        E2[Apply PCA]
+        E3[Apply t-SNE]
+        E4[Apply Other Techniques]
+        E --> E1
+        E1 --> E2
+        E1 --> E3
+        E1 --> E4
+    end
+
+    subgraph "Analyze Results"
+        F1[Evaluate Performance]
+        F2[Visualize Results]
+        F --> F1
+        F --> F2
+    end
